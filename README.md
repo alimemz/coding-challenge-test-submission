@@ -28,12 +28,12 @@ Here is a list of all the TODO's to make life a bit easier:
 ### React
 
 -  [x] Write a custom hook to set form fields in a more generic way.
--  [ ] Fetch addresses based on houseNumber and postCode. Do not introduce any additional 3rd party libraries to do this.
+-  [x] Fetch addresses based on houseNumber and postCode. Do not introduce any additional 3rd party libraries to do this.
 -  [x] Create generic `<Form />` component to display form rows, legend and a submit button.
--  [ ] Create an `<ErrorMessage />` component for displaying an error message.
+-  [x] Create an `<ErrorMessage />` component for displaying an error message.
 -  [x] Add a button to clear all form fields. Button must look different from the default primary button, see design.
 -  [x] Add conditional classNames for `primary` and `secondary` variant in `<Button />` component\
--  [ ] Ensure form validations are applied in both "Find an Address" and "Add Personal Info to address" based on comments in TODO
+-  [x] Ensure form validations are applied in both "Find an Address" and "Add Personal Info to address" based on comments in TODO
 
 ## Typescript
 
@@ -42,9 +42,9 @@ Here is a list of all the TODO's to make life a bit easier:
 
 ### Redux
 
--  [ ] Prevent duplicate addresses.
--  [ ] Write a state update which removes an address from the addresses array.
+-  [x] Prevent duplicate addresses.
+-  [x] Write a state update which removes an address from the addresses array.
 
 ### Bonus
 
--  [ ] Refactor the code in pages/api/getAddresses so that there is no duplication of logic for street number and postcode digit checking
+-  [x] Refactor the code in pages/api/getAddresses so that there is no duplication of logic for street number and postcode digit checking
