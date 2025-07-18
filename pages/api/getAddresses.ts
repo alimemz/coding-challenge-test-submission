@@ -34,19 +34,13 @@ export default async function handle(
       return !Number.isNaN(Number(value)) && Number(value) >= 0;
    };
 
-   /** TODO: Refactor the code below so there is no duplication of logic for postCode/streetNumber digit checks. */
-   if (!isStrictlyNumeric(postcode as string)) {
-      return res.status(400).send({
-         status: 'error',
-         errormessage: 'Postcode must be all digits and non negative!',
-      });
-   }
-
-   if (!isStrictlyNumeric(streetnumber as string)) {
-      return res.status(400).send({
-         status: 'error',
-         errormessage: 'Street Number must be all digits and non negative!',
-      });
+   for (const value of [postcode, streetnumber]) {
+      if (!isStrictlyNumeric(value as string)) {
+         return res.status(400).send({
+            status: 'error',
+            errormessage: `${value} must be all digits and non negative!`,
+         });
+      }
    }
 
    const mockAddresses = generateMockAddresses(
