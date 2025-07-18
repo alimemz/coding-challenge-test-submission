@@ -1,31 +1,34 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 
-import $ from "./InputText.module.css";
+import $ from './InputText.module.css';
 
-interface InputTextProps {
-  name: string;
-  placeholder: string;
-  value: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+export interface InputTextProps {
+   name: string;
+   placeholder: string;
+   value: string;
+   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+   disabled?: boolean;
 }
 
 const InputText: FunctionComponent<InputTextProps> = ({
-  name,
-  onChange,
-  placeholder,
-  value,
+   name,
+   onChange,
+   placeholder,
+   value,
+   disabled,
 }) => {
-  return (
-    <input
-      aria-label={name}
-      className={$.inputText}
-      name={name}
-      onChange={onChange}
-      placeholder={placeholder}
-      type="text"
-      value={value}
-    />
-  );
+   return (
+      <input
+         aria-label={name}
+         className={$.inputText}
+         name={name}
+         onChange={onChange}
+         placeholder={placeholder}
+         type='text'
+         value={value}
+         disabled={disabled}
+      />
+   );
 };
 
 export default InputText;
