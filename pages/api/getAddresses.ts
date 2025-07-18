@@ -38,7 +38,7 @@ export default async function handle(
       if (!isStrictlyNumeric(value as string)) {
          return res.status(400).send({
             status: 'error',
-            errormessage: `${value} must be all digits and non negative!`,
+            errormessage: `Post code and street number must be all digits and non negative!`,
          });
       }
    }
