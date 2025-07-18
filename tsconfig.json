@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,24 +16,12 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/app/*": [
-        "src/app/*"
-      ],
-      "@/types": [
-        "src/types"
-      ],
-      "@/hooks/*": [
-        "src/ui/hooks/*"
-      ],
-      "@/components/*": [
-        "src/ui/components/*"
-      ],
-      "@/pages/*": [
-        "pages/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ]
+      "@/app/*": ["src/app/*"],
+      "@/types": ["src/types"],
+      "@/hooks/*": ["src/ui/hooks/*"],
+      "@/components/*": ["src/ui/components/*"],
+      "@/pages/*": ["pages/*"],
+      "@/styles/*": ["styles/*"]
     },
     "plugins": [
       {
@@ -52,7 +36,5 @@
     "types.d.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

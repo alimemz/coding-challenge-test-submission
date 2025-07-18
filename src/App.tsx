@@ -51,7 +51,7 @@ function App() {
     setLastName(e.target.value);
 
   const handleSelectedAddressChange = (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => setSelectedAddress(e.target.value);
 
   /** TODO: Fetch addresses based on houseNumber and postCode using the local BE api
@@ -75,13 +75,13 @@ function App() {
 
     if (!selectedAddress || !addresses.length) {
       setError(
-        "No address selected, try to select an address or find one if you haven't"
+        "No address selected, try to select an address or find one if you haven't",
       );
       return;
     }
 
     const foundAddress = addresses.find(
-      (address) => address.id === selectedAddress
+      (address) => address.id === selectedAddress,
     );
 
     if (!foundAddress) {

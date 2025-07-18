@@ -4,7 +4,7 @@ import generateMockAddresses from "../../src/utils/generateMockAddresses";
 
 export default async function handle(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const {
     query: { postcode, streetnumber },
@@ -50,7 +50,7 @@ export default async function handle(
 
   const mockAddresses = generateMockAddresses(
     postcode as string,
-    streetnumber as string
+    streetnumber as string,
   );
   if (mockAddresses) {
     const timeout = (ms: number) => {

@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from "react";
 
-import $ from './Card.module.css';
+import $ from "./Card.module.css";
 
 interface CardProps {
   children: React.ReactNode;
