@@ -64,11 +64,15 @@ function App() {
             `${baseUrl}/api/getAddresses?postcode=${postCode}&streetnumber=${houseNumber}`
          );
 
-         if (!response.ok) {
-            throw new Error(response.statusText);
-         }
+         const data: {
+            details: GetAddressResponse;
+            errormessage?: string;
+            status: 'error' | 'ok';
+         } = await response.json();
 
-         const data: { details: GetAddressResponse } = await response.json();
+         if (data.status === 'error') {
+            throw new Error(data.errormessage || 'Failed to fetch addresses');
+         }
 
          const transformedAddresses = data.details.map((address) =>
             transformAddress({

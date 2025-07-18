@@ -30,11 +30,8 @@ export default async function handle(
       });
    }
 
-   /** TODO: Implement the validation logic to ensure input value
-    *  is all digits and non negative
-    */
    const isStrictlyNumeric = (value: string) => {
-      return true;
+      return !Number.isNaN(Number(value)) && Number(value) >= 0;
    };
 
    /** TODO: Refactor the code below so there is no duplication of logic for postCode/streetNumber digit checks. */
